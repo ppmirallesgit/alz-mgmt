@@ -6,91 +6,127 @@
       "archetypes": [
         "root"
       ],
-      "display_name": "Azure Landing Zones",
+      "display_name": "mg-alz-root-prod",
       "exists": false,
-      "id": "alz",
+      "id": "mg-alz-root-prod",
       "parent_id": null
     },
     {
       "archetypes": [
         "platform"
       ],
-      "display_name": "Platform",
+      "display_name": "mg-platform-prd",
       "exists": false,
-      "id": "platform",
-      "parent_id": "alz"
+      "id": "mg-platform-prd",
+      "parent_id": "mg-alz-root-prod"
     },
     {
       "archetypes": [
         "landing_zones"
       ],
-      "display_name": "Landing zones",
+      "display_name": "mg-landing_zones_prd",
       "exists": false,
-      "id": "landingzones",
-      "parent_id": "alz"
+      "id": "mg-landing_zones_prd",
+      "parent_id": "mg-alz-root-prod"
     },
     {
       "archetypes": [
-        "corp"
+        "prd_workload"
       ],
-      "display_name": "Corp",
+      "display_name": "mg-lz-workload-prd",
       "exists": false,
-      "id": "corp",
-      "parent_id": "landingzones"
+      "id": "mg-lz-workload-prd",
+      "parent_id": "mg-landing_zones_prd"
     },
     {
       "archetypes": [
-        "online"
+        "prd_workload"
       ],
-      "display_name": "Online",
+      "display_name": "mg-lz-confidential-prd",
       "exists": false,
-      "id": "online",
-      "parent_id": "landingzones"
+      "id": "mg-lz-confidential-prd",
+      "parent_id": "mg-landing_zones_prd"
     },
     {
       "archetypes": [
-        "sandbox"
+        "prd_vendor"
       ],
-      "display_name": "Sandbox",
+      "display_name": "mg-vendor-mgmt-prd",
       "exists": false,
-      "id": "sandbox",
-      "parent_id": "alz"
+      "id": "mg-vendor-mgmt-prd",
+      "parent_id": "mg-alz-root-prod"
     },
     {
       "archetypes": [
         "management"
       ],
-      "display_name": "Management",
+      "display_name": "mg-platform-management-prd",
       "exists": false,
-      "id": "management",
-      "parent_id": "platform"
+      "id": "mg-platform-management-prd",
+      "parent_id": "mg-platform-prd"
     },
     {
       "archetypes": [
         "connectivity"
       ],
-      "display_name": "Connectivity",
+      "display_name": "mg-platform-connectivity-prd",
       "exists": false,
-      "id": "connectivity",
-      "parent_id": "platform"
+      "id": "mg-platform-connectivity-prd",
+      "parent_id": "mg-platform-prd"
     },
     {
       "archetypes": [
         "identity"
       ],
-      "display_name": "Identity",
+      "display_name": "mg-platform-identity-prd",
       "exists": false,
-      "id": "identity",
-      "parent_id": "platform"
+      "id": "mg-platform-identity-prd",
+      "parent_id": "mg-platform-prd"
     },
     {
       "archetypes": [
         "decommissioned"
       ],
-      "display_name": "Decommissioned",
+      "display_name": "mg-decom-mgmt-prd",
       "exists": false,
-      "id": "decommissioned",
-      "parent_id": "alz"
+      "id": "mg-decom-mgmt-prd",
+      "parent_id": "mg-alz-root-prod"
+    },
+    {
+      "archetypes": [
+        "prd_workload"
+      ],
+      "display_name": "mg-lz-common-platform-prd",
+      "exists": false,
+      "id": "mg-lz-common-platform-prd",
+      "parent_id": "mg-landing_zones_prd"
+    },
+    {
+      "archetypes": [
+        "prd_workload"
+      ],
+      "display_name": "mg-lz-shared-infra-prd",
+      "exists": false,
+      "id": "mg-lz-shared-infra-prd",
+      "parent_id": "mg-landing_zones_prd"
+    },
+    {
+      "archetypes": [
+        "prd_workload"
+      ],
+      "display_name": "mg-lz-toolchain-prd",
+      "exists": false,
+      "id": "mg-lz-toolchain-prd",
+      "parent_id": "mg-landing_zones_prd"
+    },
+    {
+      "archetypes": [
+        "prd_workload"
+      ],
+      "display_name": "mg-lz-avd-prd",
+      "exists": false,
+      "id": "mg-lz-avd-prd",
+      "parent_id": "mg-landing_zones_prd"
     }
   ]
 }
